@@ -15,7 +15,7 @@ class LocalToolsBase(LocalToolsInterface):
             script = "build.cmd"
             sub = [script]
             result = subprocess.run(
-                sub, capture_output=True, text=True, shell=True, cwd=gitCwd)
+                sub, capture_output=True, text=True, shell=False, cwd=gitCwd)
         else:
             script = "build.sh"
             sub = ['sh', script]
